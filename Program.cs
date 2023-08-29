@@ -1,5 +1,8 @@
+using CoffeeBrand.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<ICoffeeBrandService, CoffeeBrandService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
