@@ -17,4 +17,4 @@ app.UseAuthorization();
 app.MapControllers();
 app.Run();
 
-// https://localhost:7263/GetCoffeeBrandMVC
+// https://localhost:7263/CoffeeBrand/GetMvc

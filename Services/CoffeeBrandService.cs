@@ -1,9 +1,9 @@
 namespace CoffeeBrand.Services;
-public class CoffeeBrandService: ICoffeeBrandService
+public class CoffeeBrandService : ICoffeeBrandService
 {
     public IEnumerable<CoffeeBrand> GetCoffeeBrands()
     {
-        CoffeeBrand starbucks = new CoffeeBrand
+        CoffeeBrand starbucks = new()
         {
             Id = 1,
             Name = "Starbucks",
@@ -12,7 +12,7 @@ public class CoffeeBrandService: ICoffeeBrandService
             Description = "Starbucks is one of the largest coffeehouse chains in the world, known for its wide range of coffee beverages and global presence."
         };
 
-        CoffeeBrand lavazza = new CoffeeBrand
+        CoffeeBrand lavazza = new()
         {
             Id = 2,
             Name = "Lavazza",
@@ -21,7 +21,7 @@ public class CoffeeBrandService: ICoffeeBrandService
             Description = "Lavazza is an Italian coffee brand, one of the most popular in the country, offering a variety of coffee blends and products."
         };
 
-        CoffeeBrand peetsCoffee = new CoffeeBrand
+        CoffeeBrand peetsCoffee = new()
         {
             Id = 3,
             Name = "Peet's Coffee",
@@ -30,10 +30,12 @@ public class CoffeeBrandService: ICoffeeBrandService
             Description = "Peet's Coffee is a specialty coffee roaster and retailer, known for its commitment to high-quality, freshly roasted coffee."
         };
 
-        List<CoffeeBrand> coffeeBrands = new List<CoffeeBrand>();
-        coffeeBrands.Add(starbucks);
-        coffeeBrands.Add(lavazza);
-        coffeeBrands.Add(peetsCoffee);
+        List<CoffeeBrand> coffeeBrands = new()
+        {
+            starbucks,
+            lavazza,
+            peetsCoffee
+        };
 
         return coffeeBrands;
     }
